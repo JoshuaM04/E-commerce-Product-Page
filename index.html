@@ -7,34 +7,61 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | E-commerce product page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <header>
+    <section>
+      <button type="button" aria-label="Open navigation menu."><img src="/images/icon-menu.svg" alt="" /></button>
+      <p>sneakers</p>
+      <button type="button" aria-label="Open shopping cart."><img src="./images/icon-cart.svg" alt="" /></button>
+      <img src="./images/image-avatar.png" alt="An avatar icon of a man in a blue shirt with a white collar, wavy hair, and is wearing sunglasses." />
+    </section>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+    <section>
+      <dialog>
+        <nav>
+          Collections
+          Men
+          Women
+          About
+          Contact
+        </nav>
+      </dialog>
+    </section>
+  </header>
 
-  Sneaker Company
+  <main>
+    <section>
+      <img src="./images/image-product-1.jpg" alt="Beige/Brown colored sneakers resting on the floor within a brown-orange background." />
+      <img src="./images/image-product-2.jpg" alt="Beige/Brown colored sneakers resting on small white rocks with a branch in-front within a white-orange background." hidden aria-hidden />
+      <img src="./images/image-product-3.jpg" alt="A single beige/brown colored sneaker resting on a small white rock, with orange paper wrapping on-top of the white rock, within a white-orange background." hidden aria-hidden />
+      <img src="./images/image-product-4.jpg" alt="A single beige/brown colored sneaker resting it's heal on a stack of 2 white rocks within a orange background." hidden aria-hidden />
+    </section>
 
-  Fall Limited Edition Sneakers
+    <section>
+      <div>
+        <p>Sneaker Company</p>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p>
+          These low-profile sneakers are your perfect casual wear companion. Featuring a
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+      </div>
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
+      <div>
+        <div>
+          <p>$125.00</p>
+          <p>50%</p>
+        </div>
+        <p>$250.00</p>
+      </div>
+      
+      <div>
+        <p>0</p>
+        <button>Add to cart</button>
+      </div>
+    </section>
+  </main>
   
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
