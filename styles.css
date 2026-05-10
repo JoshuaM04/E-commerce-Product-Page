@@ -63,14 +63,14 @@ header {
             color: black;
         }
 
-        dialog {
+        dialog#navigation-menu {
             min-height: 100dvh;
             width: clamp(200px, 60%, 2000px);
             border: none;
             margin: 0 auto 0 0;
         }
 
-        dialog:modal {
+        dialog#navigation-menu:modal {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -87,6 +87,40 @@ header {
             display: flex;
             flex-direction: column;
             gap: 2rem;
+        }
+
+        dialog#cart-menu {
+            width: 95%;
+            height: clamp(100px, 25%, 500px);
+            border: none;
+            border-radius: 10px;
+            margin: 100px auto auto auto;
+            padding: 1rem;
+
+            p {
+                font-weight: bold;
+            }
+
+            hr {
+                margin: 0 -1rem 0 -1rem;
+            }
+
+            .cart-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 90%;
+            }
+
+            p.cart-menu-message {
+                color: gray;
+            }
+        }
+
+        dialog#cart-menu:popover-open {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
         }
     }
 }

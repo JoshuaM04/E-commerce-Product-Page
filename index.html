@@ -29,7 +29,7 @@
       </div>
       
       <div class="inner-box">
-        <button class="shopping-cart" type="button" aria-label="Open shopping cart."><img src="./images/icon-cart.svg" alt="" /></button>
+        <button class="shopping-cart" popovertarget="cart-menu" type="button" aria-label="Open shopping cart."><img src="./images/icon-cart.svg" alt="" /></button>
         <img class="avatar-image" src="./images/image-avatar.png" alt="An avatar icon of a man in a blue shirt with a white collar, wavy hair, and is wearing sunglasses." />
       </div>
     </section>
@@ -44,6 +44,16 @@
             <p>About</p>
             <p>Contact</p>
           </nav>
+      </dialog>
+
+      <dialog id="cart-menu" popover>
+        <div>
+          <p>Cart</p>
+        </div>
+        <hr />
+        <div class="cart-container">
+          <p class="cart-menu-message">Your cart is empty.</p>
+        </div>
       </dialog>
     </section>
   </header>
