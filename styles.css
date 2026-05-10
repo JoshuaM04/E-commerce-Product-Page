@@ -95,6 +95,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    margin-bottom: 200px;
 
     .box-one {
         margin: 0 -20px 0 -20px;
