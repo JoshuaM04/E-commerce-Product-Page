@@ -5,42 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght,YOPQ@100..900,300&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
 <body>
   <header>
-    <section>
-      <button type="button" aria-label="Open navigation menu."><img src="/images/icon-menu.svg" alt="" /></button>
-      <p>sneakers</p>
-      <button type="button" aria-label="Open shopping cart."><img src="./images/icon-cart.svg" alt="" /></button>
-      <img src="./images/image-avatar.png" alt="An avatar icon of a man in a blue shirt with a white collar, wavy hair, and is wearing sunglasses." />
+    <section class="box-one">
+      <div class="inner-box">
+        <button class="mobile-navigation" type="button" aria-label="Open navigation menu." aria-expanded="false" aria-controls="navigation-menu" command="show-modal" commandfor="navigation-menu"><img src="/images/icon-menu.svg" alt="" /></button>
+        <p class="website-title">sneakers</p>
+        <nav class="desktop-navigation" hidden aria-hidden>
+          <p>Collections</p>
+          <p>Men</p>
+          <p>Women</p>
+          <p>About</p>
+          <p>Contact</p>
+        </nav>
+      </div>
+      
+      <div class="inner-box">
+        <button class="shopping-cart" type="button" aria-label="Open shopping cart."><img src="./images/icon-cart.svg" alt="" /></button>
+        <img class="avatar-image" src="./images/image-avatar.png" alt="An avatar icon of a man in a blue shirt with a white collar, wavy hair, and is wearing sunglasses." />
+      </div>
     </section>
 
-    <section>
-      <dialog>
-        <nav>
-          Collections
-          Men
-          Women
-          About
-          Contact
-        </nav>
+    <section class="box-two">
+      <dialog id="navigation-menu">
+          <button type="submit" command="close" commandfor="navigation-menu" aria-label="Close navigation menu" aria-controls="navigation-menu"><img src="./images/icon-close.svg" alt="" /></button>
+          <nav>
+            <p>Collections</p>
+            <p>Men</p>
+            <p>Women</p>
+            <p>About</p>
+            <p>Contact</p>
+          </nav>
       </dialog>
     </section>
   </header>
 
   <main>
-    <section>
-      <img src="./images/image-product-1.jpg" alt="Beige/Brown colored sneakers resting on the floor within a brown-orange background." />
-      <img src="./images/image-product-2.jpg" alt="Beige/Brown colored sneakers resting on small white rocks with a branch in-front within a white-orange background." hidden aria-hidden />
-      <img src="./images/image-product-3.jpg" alt="A single beige/brown colored sneaker resting on a small white rock, with orange paper wrapping on-top of the white rock, within a white-orange background." hidden aria-hidden />
-      <img src="./images/image-product-4.jpg" alt="A single beige/brown colored sneaker resting it's heal on a stack of 2 white rocks within a orange background." hidden aria-hidden />
+    <section class="box-one">
+      <img class="gallery-image" src="./images/image-product-1.jpg" alt="Beige/Brown colored sneakers resting on the floor within a brown-orange background." />
+      <img class="gallery-image" src="./images/image-product-2.jpg" alt="Beige/Brown colored sneakers resting on small white rocks with a branch in-front within a white-orange background." hidden aria-hidden />
+      <img class="gallery-image" src="./images/image-product-3.jpg" alt="A single beige/brown colored sneaker resting on a small white rock, with orange paper wrapping on-top of the white rock, within a white-orange background." hidden aria-hidden />
+      <img class="gallery-image" src="./images/image-product-4.jpg" alt="A single beige/brown colored sneaker resting it's heal on a stack of 2 white rocks within a orange background." hidden aria-hidden />
     </section>
 
-    <section>
-      <div>
-        <p>Sneaker Company</p>
+    <section class="box-two">
+      <div class="child-box-one">
+        <p class="company-name">Sneaker Company</p>
         <h1>Fall Limited Edition Sneakers</h1>
         <p>
           These low-profile sneakers are your perfect casual wear companion. Featuring a
@@ -48,24 +66,31 @@
         </p>
       </div>
 
-      <div>
-        <div>
-          <p>$125.00</p>
-          <p>50%</p>
+      <div class="child-box-two">
+        <div class="current-price-container">
+          <p class="current-price">$125.00</p>
+          <p class="price-discount">50%</p>
         </div>
-        <p>$250.00</p>
+        <p class="old-price">$250.00</p>
       </div>
-      
-      <div>
-        <p>0</p>
-        <button>Add to cart</button>
+
+      <div class="child-box-three">
+        <div class="quantity">
+          <button type="button" aria-label="Decrease quantity"><img src="./images/icon-minus.svg" alt="" /></button>
+          <p>0</p>
+          <button type="button" aria-label="Increase quantity"><img src="./images/icon-plus.svg" alt="" /></button>
+        </div>
+        <button class="add-cart-button">
+          <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="black" fill-rule="nonzero"/></svg>
+          Add to cart
+        </button>
       </div>
     </section>
   </main>
   
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a></p>
+    <p>Coded by <a href="https://www.frontendmentor.io/profile/JoshuaM04">Joshua Martinez</a></p>
   </footer>
 </body>
 </html>
